@@ -4,16 +4,12 @@ import { FaBookOpen, FaHourglassHalf, FaCheckCircle } from 'react-icons/fa';
 const booksData = {
   current: [
     {
-      title: "Programador Autodidata",
+      title: "Cientista da Computação Autodidata",
       status: "em progresso",
-      link: "https://collshp.com/compresac67?share_channel_code=1&view=storefront" 
+      link: "https://mercadolivre.com/sec/1p3nKAB" 
     }
   ],
   upcoming: [
-    {
-      title: "Cientista da Computação Autodidata",
-      link: "https://collshp.com/compresac67?share_channel_code=1&view=storefront"
-    },
     {
       title: "Clean Code",
       link: "https://collshp.com/compresac67?share_channel_code=1&view=storefront"
@@ -32,6 +28,10 @@ const booksData = {
     }
   ],
   completed: [
+    {
+      title: "Programador Autodidata",
+      link: "https://collshp.com/compresac67?share_channel_code=1&view=storefront" 
+    }
     
   ]
 };
