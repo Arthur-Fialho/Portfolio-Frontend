@@ -7,6 +7,8 @@ import HeroSection from './components/HeroSection';
 import SkillsSection from './components/SkillsSection';
 import ContactSection from './components/ContactSection';
 import BooksSection from './components/BooksSection';
+import { KleverProvider } from '@klever/connect-react';
+import TransferKLVSection from './components/TransferKLVSection';
 
 function App() {
   return (
@@ -14,11 +16,21 @@ function App() {
       
       
       <main>
-        <HeroSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
-        <BooksSection />
+        <KleverProvider
+              config={{
+                network: 'testnet',
+                autoConnect: true,
+                reconnectOnMount: true,
+                debug: true,
+              }}
+            >
+              <HeroSection />
+              <SkillsSection />
+              <ProjectsSection />
+              <ContactSection />
+              <BooksSection />
+              <TransferKLVSection />
+            </KleverProvider>
       </main>
 
       <Footer />
