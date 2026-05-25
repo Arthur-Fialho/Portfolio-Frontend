@@ -1,65 +1,101 @@
 import profileImage from '../assets/profile.png';
-import ThemeSwitcher from './ThemeSwitcher';
 import Clock from './Clock';
+import { FaArrowDown, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col justify-center text-center px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="absolute top-6 right-6">
-        <ThemeSwitcher />
-      </div>
-      <div className="absolute top-6 left-6 hidden min-[390px]:block">
+    <section 
+      id="hero" 
+      className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-between items-center text-center px-4 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden py-12"
+    >
+      {/* Background patterns and glowing effects */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-40 dark:opacity-75 pointer-events-none"></div>
+      <div className="absolute top-10 left-10 w-72 h-72 sm:w-96 sm:h-96 radial-glow-teal animate-pulse-glow pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 sm:w-96 sm:h-96 radial-glow-indigo animate-pulse-glow pointer-events-none" style={{ animationDelay: '-2s' }}></div>
+
+      {/* Top row widget */}
+      <div className="relative z-10 w-full flex justify-center mt-4">
         <Clock />
       </div>
-      
-      {/* Conteúdo principal centralizado */}
-      <div className="flex flex-col items-center gap-6 flex-grow justify-center">
-        <div className="relative w-48 h-48">
-          {/* Ring de luz com brilho pulsante */}
-          <div className="absolute inset-0 rounded-full ring-4 ring-gray-300 dark:ring-gray-700 ring-offset-8 ring-offset-white dark:ring-offset-gray-900 shadow-xl glow-pulse">
+
+      {/* Main hero content */}
+      <div className="relative z-10 flex flex-col items-center gap-8 my-auto max-w-3xl">
+        {/* Avatar with floating & glowing border */}
+        <div className="relative animate-float">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-teal-400 via-indigo-500 to-purple-500 blur-md opacity-75"></div>
+          <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full p-1 bg-white dark:bg-slate-900 shadow-2xl flex items-center justify-center">
             <img 
               src={profileImage} 
-              alt="Foto de Perfil de Arthur Fialho"
-              className="w-full h-full object-cover rounded-full relative z-10"
+              alt="Arthur Fialho profile picture"
+              className="w-full h-full object-cover rounded-full"
             />
           </div>
-          
-          {/* Efeito de partículas girando */}
-          <div className="absolute -inset-2 rounded-full animate-spin" style={{
-            background: 'conic-gradient(from 0deg, transparent 70%, rgba(20, 184, 166, 0.3) 80%, transparent 90%)',
-            animation: 'spin 6s linear infinite'
-          }}></div>
         </div>
 
-        <div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-teal-500 dark:text-teal-400 leading-tight">
-            Arthur Fialho
+        {/* Text descriptions */}
+        <div className="space-y-4">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100/80 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 border border-teal-200/50 dark:border-teal-800/30">
+            ✨ Disponível para novos projetos
+          </span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
+            Olá, eu sou <br />
+            <span className="bg-gradient-to-r from-teal-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+              Arthur Fialho
+            </span>
           </h1>
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-2">
-            Desenvolvedor Web2 & Web3
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100">
+            Desenvolvedor Full Stack & Web3
           </h2>
-          <h2 className="text-md md:text-lg font-medium text-gray-600 dark:text-gray-400 mt-2">
-            Estudante de ciência da computação, <br /> aprendendo e evoluindo a cada código!
-          </h2>
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
+            Estudante de Ciência da Computação apaixonado por criar experiências digitais modernas, eficientes e escaláveis.
+          </p>
         </div>
-      </div>
-      
-      {/* Indicador de scroll no final da seção */}
-      <div className="flex flex-col items-center pb-8 pt-12 cursor-pointer group" onClick={() => document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })}>
-        <p className="text-base md:text-lg font-medium text-gray-600 dark:text-gray-400 mb-2 md:mb-4 group-hover:text-teal-500 dark:group-hover:text-teal-400 transition-all duration-300 hidden min-[380px]:block">
-          Conheça meu trabalho
-        </p>
-        <div className="transform group-hover:scale-110 transition-all duration-300">
-          <svg 
-            className="w-10 h-10 md:w-12 md:h-12 text-gray-500 dark:text-gray-400 group-hover:text-teal-500 dark:group-hover:text-teal-400 transition-all duration-300 animate-bounce" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
+
+        {/* Action buttons / Social */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
+          <a 
+            href="#projects"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white font-semibold shadow-lg hover:shadow-indigo-500/25 dark:hover:shadow-teal-500/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7" />
-          </svg>
+            Ver Meus Projetos
+          </a>
+          <a 
+            href="#contact"
+            className="px-6 py-3 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+          >
+            Entre em Contato
+          </a>
+          <div className="flex gap-2 ml-2">
+            <a 
+              href="https://github.com/Arthur-Fialho" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95"
+              aria-label="GitHub profile"
+            >
+              <FaGithub size={18} />
+            </a>
+            <a 
+              href="https://linkedin.com/in/arthurfialho" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95"
+              aria-label="LinkedIn profile"
+            >
+              <FaLinkedin size={18} />
+            </a>
+          </div>
         </div>
       </div>
+
+      {/* Down indicator */}
+      <button 
+        onClick={() => document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })}
+        className="relative z-10 mt-8 group flex flex-col items-center gap-1 text-xs font-semibold text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+      >
+        <span>Rolagem</span>
+        <FaArrowDown className="text-base animate-bounce mt-1 group-hover:translate-y-0.5 transition-transform" />
+      </button>
     </section>
   );
 }

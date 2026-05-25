@@ -1,41 +1,23 @@
-// import Header from './components/Header';
-// import EducationSection from './components/EducationSection';
-// import ExperienceSection from './components/ExperienceSection';
-import Footer from './components/Footer';
-import ProjectsSection from './components/ProjectsSection';
+import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
-import BooksSection from './components/BooksSection';
-import { KleverProvider } from '@klever/connect-react';
-import TransferKLVSection from './components/TransferKLVSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300">
-      
-      
+    <div className="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
+      <Header />
       <main>
-        <KleverProvider
-              config={{
-                network: 'testnet',
-                autoConnect: true,
-                reconnectOnMount: true,
-                debug: true,
-              }}
-            >
-              <HeroSection />
-              <SkillsSection />
-              <ProjectsSection />
-              <ContactSection />
-              <BooksSection />
-              <TransferKLVSection />
-            </KleverProvider>
+        <HeroSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
       </main>
-
       <Footer />
     </div>
-  )
+  );
 }
 
 export default App;

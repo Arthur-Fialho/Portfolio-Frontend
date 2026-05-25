@@ -1,44 +1,29 @@
 import { useState, useEffect } from 'react';
+import { FaRegClock } from 'react-icons/fa';
 
 function Clock() {
   const [date, setDate] = useState(new Date());
 
-  // Temporizador.
   useEffect(() => {
-    // A função setInterval irá executar a cada 1000ms (1 segundo)
     const timerId = setInterval(() => {
-      // A cada segundo, atualizamos o nosso state com a nova hora
       setDate(new Date());
     }, 1000);
-
-    // A função de "limpeza" (cleanup) Evita memory leaks.
-    return () => {
-      clearInterval(timerId);
-    };
+    return () => clearInterval(timerId);
   }, []);
 
-  // Opções para formatar a data e a hora para o padrão local (ex: pt-BR)
   const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  
-  // Opções para mobile (formato mais compacto)
-  const mobileDateOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const dateOptions = { weekday: 'short', day: 'numeric', month: 'short' };
 
   return (
-    <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
-      <div className="text-left text-sm font-mono">
-        {/* Versão Desktop - formato completo */}
-        <div className="hidden md:block">
-          <p className="text-gray-400 dark:text-gray-500">{date.toLocaleDateString(undefined, dateOptions)}</p>
-          <p className="text-gray-500 dark:text-gray-400">{date.toLocaleTimeString(undefined, timeOptions)}</p>
-        </div>
-        
-        {/* Versão Mobile - formato compacto */}
-        <div className="block md:hidden">
-          <p className="text-gray-400 dark:text-gray-500">{date.toLocaleDateString('pt-BR', mobileDateOptions)}</p>
-          <p className="text-gray-500 dark:text-gray-400">{date.toLocaleTimeString(undefined, timeOptions)}</p>
-        </div>
-      </div>
+    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/50 shadow-sm font-mono text-xs text-slate-600 dark:text-slate-400">
+      <FaRegClock className="text-teal-500 dark:text-teal-400 animate-pulse" />
+      <span className="font-semibold text-slate-700 dark:text-slate-300">
+        {date.toLocaleTimeString(undefined, timeOptions)}
+      </span>
+      <span className="text-slate-400 dark:text-slate-500">|</span>
+      <span>
+        {date.toLocaleDateString('pt-BR', dateOptions)}
+      </span>
     </div>
   );
 }
