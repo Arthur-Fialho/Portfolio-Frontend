@@ -3,36 +3,76 @@
     "id": 1,
     "title": "API Java Portfolio (Spring Boot)",
     "description": "Uma API RESTful robusta desenvolvida para gerenciar dinamicamente as informações do meu portfólio. Possui controle de acesso seguro por meio de autenticação JWT, tratamento global de exceções e mapeamento com persistência PostgreSQL via Spring Data JPA.",
-    "technologies": ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "Docker", "Flyway"],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "PostgreSQL",
+      "Docker",
+      "Flyway"
+    ],
     "imageUrl": "/images/api_backend.png",
     "repositoryUrl": "https://github.com/Arthur-Fialho/API-Java-Portfolio",
     "productionUrl": ""
   },
   {
     "id": 2,
-    "title": "Klever Blockchain Donation System",
-    "description": "Uma aplicação Web3 conectada à blockchain Klever (rede de teste). Desenvolvida em React, ela detecta carteiras integradas ao navegador do usuário e viabiliza transações seguras de tokens nativos (KLV) e tokens customizados (KDA).",
-    "technologies": ["React", "JavaScript", "Web3", "Blockchain", "Klever SDK"],
-    "imageUrl": "/images/blockchain_wallet.png",
-    "repositoryUrl": "https://github.com/Arthur-Fialho/API-Java-Portfolio-Frontend",
-    "productionUrl": "https://arthurfialho.com.br"
+    "title": "Crypto Em Pauta",
+    "description": "Desenvolvimento de uma arquitetura Full-Stack para curadoria automatizada de notícias de criptomoedas via IA e acesso a analises de ativos financeiros através de um Paywall dinâmico (Stripe). O projeto unifica um Worker em segundo plano (Hangfire) que consome APIs do mercado (DefiLlama, Binance) e RSS feeds globais, gerando textos em português e thumbnails futuristas através da Inteligência Artificial do Google Gemini, além de um funil de E-mail Marketing próprio com revalidação otimista.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "TailWind",
+      "NextAuth.js",
+      "C#",
+      ".NET8",
+      "PostgresSQL",
+      "Redis",
+      "Resend",
+      "IA",
+      "Docker",
+      "Nginx",
+      "Stripe"
+    ],
+    "imageUrl": "/images/cryptoempauta.png",
+    "repositoryUrl": "",
+    "productionUrl": "https://cryptoempauta.com"
   },
   {
     "id": 3,
-    "title": "VoxChain - Decentralized Voting dApp",
-    "description": "Um aplicativo de votação descentralizada que garante transparência e segurança. O back-end é composto por contratos inteligentes escritos em Solidity e testados com Foundry, integrados a um front-end moderno em React para visualização de resultados.",
-    "technologies": ["Solidity", "Foundry", "React", "Web3", "Ethers.js"],
-    "imageUrl": "/images/voting_dapp.png",
-    "repositoryUrl": "https://github.com/Arthur-Fialho",
+    "title": "Guess-Number",
+    "description": "Web App 'Adivinhe o Número' com backend em .NET e frontend em React. O projeto consiste em uma aplicação web onde o usuário deve adivinhar um número secreto. O jogo possui três níveis de dificuldade, um placar de líderes e um design simples e intuitivo.",
+    "technologies": [
+      "react",
+      "xunit",
+      "efcore",
+      "aspnet-core",
+      "sqllite",
+      "donet",
+      "vitest"
+    ],
+    "imageUrl": "/images/HomeScreenGuessNumber.png",
+    "repositoryUrl": "https://github.com/Arthur-Fialho/Guess-Number",
     "productionUrl": ""
   },
   {
     "id": 4,
-    "title": "Project Phoenix - Task Manager Board",
-    "description": "Um gerenciador de tarefas Kanban minimalista focado em alta produtividade. Desenvolvido com C# e .NET no back-end seguindo arquitetura limpa, e integrado a uma interface ágil de cartões que gerencia prioridades e avanço de sprints.",
-    "technologies": ["C#", ".NET Core", "Entity Framework", "SQLite", "React", "Tailwind CSS"],
+    "title": "Garagil",
+    "description": "GarAgil é uma plataforma SaaS B2B moderna, baseada em IA, projetada para otimizar e automatizar as operações diárias de oficinas mecânicas. O nome combina 'Garage' (oficina) com 'Agility' (agilidade), refletindo a missão principal: otimizar o tempo, reduzir a burocracia e melhorar a satisfação do cliente por meio de fluxos de trabalho inteligentes. Este projeto foi desenvolvido com Arquitetura Limpa, Desenvolvimento Orientado a Testes (TDD) rigoroso e uma abordagem nativa da nuvem.",
+    "technologies": [
+      "C#",
+      ".NET8",
+      "Docker",
+      "Entity Framework",
+      "xUnit",
+      "Nginx",
+      "SQLite",
+      "React",
+      "Tailwind CSS"
+    ],
     "imageUrl": "/images/task_manager.png",
-    "repositoryUrl": "https://github.com/Arthur-Fialho",
+    "repositoryUrl": "https://github.com/Arthur-Fialho/GarAgil",
     "productionUrl": ""
   }
 ]
