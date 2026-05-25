@@ -31,7 +31,7 @@ function ProjectsSection() {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-            Meus <span className="bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent">Projetos</span>
+            Meus <span className="bg-gradient-to-r from-brand-med to-brand-light bg-clip-text text-transparent">Projetos</span>
           </h2>
           <p className="text-slate-500 dark:text-slate-400 max-w-lg mx-auto text-sm sm:text-base">
             Uma seleção de aplicações web e contratos inteligentes desenvolvidos recentemente.

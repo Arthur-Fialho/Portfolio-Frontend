@@ -22,7 +22,7 @@ function HeroSection() {
       <div className="relative z-10 flex flex-col items-center gap-8 my-auto max-w-3xl">
         {/* Avatar with floating & glowing border */}
         <div className="relative animate-float">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-teal-400 via-indigo-500 to-purple-500 blur-md opacity-75"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-med via-brand-light to-emerald-400 blur-md opacity-75"></div>
           <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full p-1 bg-white dark:bg-slate-900 shadow-2xl flex items-center justify-center">
             <img 
               src={profileImage} 
@@ -34,12 +34,12 @@ function HeroSection() {
 
         {/* Text descriptions */}
         <div className="space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100/80 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 border border-teal-200/50 dark:border-teal-800/30">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100/80 dark:bg-emerald-950/40 text-emerald-850 dark:text-emerald-300 border border-emerald-200/50 dark:border-emerald-900/30">
             ✨ Disponível para novos projetos
           </span>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
             Olá, eu sou <br />
-            <span className="bg-gradient-to-r from-teal-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-med via-brand-light to-emerald-500 bg-clip-text text-transparent">
               Arthur Fialho
             </span>
           </h1>
@@ -55,7 +55,7 @@ function HeroSection() {
         <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
           <a 
             href="#projects"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white font-semibold shadow-lg hover:shadow-indigo-500/25 dark:hover:shadow-teal-500/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-med to-brand-light hover:from-brand-light hover:to-emerald-500 text-white font-semibold shadow-lg hover:shadow-emerald-950/25 dark:hover:shadow-emerald-950/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
           >
             Ver Meus Projetos
           </a>
@@ -91,7 +91,7 @@ function HeroSection() {
       {/* Down indicator */}
       <button 
         onClick={() => document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })}
-        className="relative z-10 mt-8 group flex flex-col items-center gap-1 text-xs font-semibold text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+        className="relative z-10 mt-8 group flex flex-col items-center gap-1 text-xs font-semibold text-slate-400 hover:text-brand-light dark:hover:text-emerald-400 transition-colors"
       >
         <span>Rolagem</span>
         <FaArrowDown className="text-base animate-bounce mt-1 group-hover:translate-y-0.5 transition-transform" />

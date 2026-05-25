@@ -3,22 +3,22 @@ import { FaCode, FaLaptopCode, FaCube, FaServer } from 'react-icons/fa';
 const skillCategories = [
   {
     title: "Linguagens",
-    icon: <FaCode className="text-xl text-teal-500 dark:text-teal-400" />,
+    icon: <FaCode className="text-xl text-brand-light dark:text-emerald-400" />,
     skills: ["Java", "JavaScript", "TypeScript", "Python", "Rust", "C#", "Motoko", "HTML", "CSS"]
   },
   {
     title: "Frameworks & Libs",
-    icon: <FaLaptopCode className="text-xl text-indigo-500 dark:text-indigo-400" />,
+    icon: <FaLaptopCode className="text-xl text-emerald-600 dark:text-emerald-300" />,
     skills: ["React", "Spring Boot", ".NET", "WordPress"]
   },
   {
     title: "Web3 & Blockchain",
-    icon: <FaCube className="text-xl text-purple-500 dark:text-purple-400" />,
+    icon: <FaCube className="text-xl text-brand-med dark:text-emerald-400" />,
     skills: ["Solidity", "Foundry", "Blockchain", "Web3"]
   },
   {
     title: "Bancos & Infraestrutura",
-    icon: <FaServer className="text-xl text-emerald-500 dark:text-emerald-400" />,
+    icon: <FaServer className="text-xl text-teal-600 dark:text-teal-400" />,
     skills: ["PostgreSQL", "Docker", "Git", "AWS", "Linux", "Windows"]
   }
 ];
@@ -32,7 +32,7 @@ function SkillsSection() {
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-            Minhas <span className="bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent">Habilidades</span>
+            Minhas <span className="bg-gradient-to-r from-brand-med to-brand-light bg-clip-text text-transparent">Habilidades</span>
           </h2>
           <p className="text-slate-500 dark:text-slate-400 max-w-lg mx-auto text-sm sm:text-base">
             Tecnologias, frameworks e ferramentas que utilizo no meu fluxo de desenvolvimento no dia a dia.
@@ -59,7 +59,7 @@ function SkillsSection() {
                 {category.skills.map((skill, sIndex) => (
                   <span
                     key={sIndex}
-                    className="bg-slate-100/80 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 text-sm font-semibold px-3.5 py-1.5 rounded-lg border border-slate-200/50 dark:border-slate-800/50 hover:bg-teal-500 hover:text-white dark:hover:bg-teal-500/80 dark:hover:text-white hover:border-teal-400 dark:hover:border-teal-500 transition-all duration-200 cursor-default"
+                    className="bg-slate-100/80 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 text-sm font-semibold px-3.5 py-1.5 rounded-lg border border-slate-200/50 dark:border-slate-800/50 hover:bg-brand-light hover:text-white dark:hover:bg-brand-light/80 dark:hover:text-white hover:border-brand-light dark:hover:border-brand-light transition-all duration-200 cursor-default"
                   >
                     {skill}
                   </span>

@@ -13,7 +13,7 @@ function ProjectCard({ title, description, technologies, repositoryUrl }) {
         {technologies.map((tech) => (
           <span 
             key={tech} 
-            className="bg-slate-100/80 dark:bg-slate-800/60 text-xs font-bold text-teal-600 dark:text-teal-400 px-2.5 py-1 rounded-lg border border-slate-200/50 dark:border-slate-800/50"
+            className="bg-slate-100/80 dark:bg-slate-800/60 text-xs font-bold text-brand-light dark:text-emerald-400 px-2.5 py-1 rounded-lg border border-slate-200/50 dark:border-slate-800/50"
           >
             {tech}
           </span>
@@ -27,7 +27,7 @@ function ProjectCard({ title, description, technologies, repositoryUrl }) {
             href={repositoryUrl} 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-light dark:hover:text-emerald-400 transition-colors"
           >
             {isGithub ? (
               <>
