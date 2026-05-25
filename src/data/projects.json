@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "API Java Portfolio (Spring Boot)",
+    "description": "Uma API RESTful robusta desenvolvida para gerenciar dinamicamente as informações do meu portfólio. Possui controle de acesso seguro por meio de autenticação JWT, tratamento global de exceções e mapeamento com persistência PostgreSQL via Spring Data JPA.",
+    "technologies": ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "Docker", "Flyway"],
+    "imageUrl": "/images/api_backend.png",
+    "repositoryUrl": "https://github.com/Arthur-Fialho/API-Java-Portfolio",
+    "productionUrl": ""
+  },
+  {
+    "id": 2,
+    "title": "Klever Blockchain Donation System",
+    "description": "Uma aplicação Web3 conectada à blockchain Klever (rede de teste). Desenvolvida em React, ela detecta carteiras integradas ao navegador do usuário e viabiliza transações seguras de tokens nativos (KLV) e tokens customizados (KDA).",
+    "technologies": ["React", "JavaScript", "Web3", "Blockchain", "Klever SDK"],
+    "imageUrl": "/images/blockchain_wallet.png",
+    "repositoryUrl": "https://github.com/Arthur-Fialho/API-Java-Portfolio-Frontend",
+    "productionUrl": "https://arthurfialho.com.br"
+  },
+  {
+    "id": 3,
+    "title": "VoxChain - Decentralized Voting dApp",
+    "description": "Um aplicativo de votação descentralizada que garante transparência e segurança. O back-end é composto por contratos inteligentes escritos em Solidity e testados com Foundry, integrados a um front-end moderno em React para visualização de resultados.",
+    "technologies": ["Solidity", "Foundry", "React", "Web3", "Ethers.js"],
+    "imageUrl": "/images/voting_dapp.png",
+    "repositoryUrl": "https://github.com/Arthur-Fialho",
+    "productionUrl": ""
+  },
+  {
+    "id": 4,
+    "title": "Project Phoenix - Task Manager Board",
+    "description": "Um gerenciador de tarefas Kanban minimalista focado em alta produtividade. Desenvolvido com C# e .NET no back-end seguindo arquitetura limpa, e integrado a uma interface ágil de cartões que gerencia prioridades e avanço de sprints.",
+    "technologies": ["C#", ".NET Core", "Entity Framework", "SQLite", "React", "Tailwind CSS"],
+    "imageUrl": "/images/task_manager.png",
+    "repositoryUrl": "https://github.com/Arthur-Fialho",
+    "productionUrl": ""
+  }
+]

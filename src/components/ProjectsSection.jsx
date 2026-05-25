@@ -1,26 +1,7 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import ProjectCard from './ProjectCard';
+import projectsData from '../data/projects.json';
 
 function ProjectsSection() {
-  const [projects, setProjects] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/projects`);
-        setProjects(response.data);
-      } catch (error) {
-        console.error("Erro ao buscar projetos:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
-
   return (
     <section id="projects" className="py-24 px-4 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 relative overflow-hidden">
       {/* Background patterns and glowing effects */}
@@ -38,40 +19,19 @@ function ProjectsSection() {
           </p>
         </div>
 
-        {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((n) => (
-              <div key={n} className="glass-card p-6 sm:p-8 rounded-2xl animate-pulse space-y-4">
-                <div className="h-6 bg-slate-200 dark:bg-slate-800 rounded w-2/3"></div>
-                <div className="space-y-2">
-                  <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded"></div>
-                  <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-5/6"></div>
-                </div>
-                <div className="flex gap-2 pt-2">
-                  <div className="h-6 bg-slate-200 dark:bg-slate-800 rounded-full w-16"></div>
-                  <div className="h-6 bg-slate-200 dark:bg-slate-800 rounded-full w-16"></div>
-                </div>
-                <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-1/3 mx-auto pt-4"></div>
-              </div>
-            ))}
-          </div>
-        ) : projects.length === 0 ? (
-          <div className="text-center py-12 glass-card p-8 rounded-2xl max-w-md mx-auto">
-            <p className="text-slate-500 dark:text-slate-400">Nenhum projeto encontrado. Inicialize a API do portfólio para carregar projetos.</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                technologies={project.technologies ? project.technologies.split(', ') : []}
-                repositoryUrl={project.repositoryUrl}
-              />
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectsData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              imageUrl={project.imageUrl}
+              repositoryUrl={project.repositoryUrl}
+              productionUrl={project.productionUrl}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
