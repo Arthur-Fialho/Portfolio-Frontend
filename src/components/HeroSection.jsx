@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-between items-center text-center px-4 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden py-12"
+      className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-between items-center text-center px-4 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden py-12 gap-y-6"
     >
       {/* Background patterns and glowing effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-40 dark:opacity-75 pointer-events-none"></div>
@@ -23,7 +23,7 @@ function HeroSection() {
         {/* Avatar with floating & glowing border */}
         <div className="relative animate-float">
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-med via-brand-light to-emerald-400 blur-md opacity-75"></div>
-          <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full p-1 bg-white dark:bg-slate-900 shadow-2xl flex items-center justify-center">
+          <div className="relative w-32 h-32 sm:w-48 sm:h-48 rounded-full p-1 bg-white dark:bg-slate-900 shadow-2xl flex items-center justify-center">
             <img 
               src={profileImage} 
               alt="Arthur Fialho profile picture"
