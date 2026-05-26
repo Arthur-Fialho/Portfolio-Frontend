@@ -54,8 +54,8 @@ Este é o front-end do meu portfólio pessoal, desenvolvido com **React 19**, **
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/Arthur-Fialho/API-Java-Portfolio-Frontend.git
-   cd API-Java-Portfolio-Frontend
+   git clone https://github.com/Arthur-Fialho/Portfolio-Frontend.git
+   cd Portfolio-Frontend
    ```
 
 2. **Instale as dependências:**
